@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from notes.views import NoteListCreate, NoteGetUpdateDelete
-from notes import views
+from users.views import UserRegistrationView, UserListView, UserGetUpdate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('notes/', NoteListCreate.as_view(), name='note-list-create'),
-    path('notes/<int:pk>/', NoteGetUpdateDelete.as_view(), name='note-get-update-delete')
+    path('notes/<int:pk>/', NoteGetUpdateDelete.as_view(), name='note-get-update-delete'),
+    path('register/', UserRegistrationView.as_view(), name='user-registration'),
+    path('users/', UserListView.as_view(), name='user-list'),
+    path('users/<int:pk>/', UserGetUpdate.as_view(), name='user-get-update-delete')
 ]
