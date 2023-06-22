@@ -1,3 +1,4 @@
+import secrets
 """
 Django settings for notestore project.
 
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2w#0^e*-0d+eo$pz!e0z-%agrk+7*hmxol77e1pu5(*&rb!mne'
+SECRET_KEY = secrets.token_hex(64)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
