@@ -1,4 +1,4 @@
-# Notestore API
+# **Notestore API**
 
 This is a Django API for managing notes and user registration.
 
